@@ -1,3 +1,15 @@
 <resources>
-    <string name="app_name">FoodOrderApp</string>
+    <string name="app_name">Food App</string>
+    <string name="text_tittle_banner">DISKON 40%</string>
+    <string name="text_desc_banner">Pesan Makanan Lewat Aplikasi dan Dapatkan Diskon</string>
+    <string name="text_name">Hi. Gustian!</string>
+    <string name="text_greetings">Mau Makan Apa Hari Ini?</string>
+    <string name="text_tittle_categories">Categories</string>
+    <string name="text_see_all">See All..</string>
+    <string name="text_categori_1">Nasi</string>
+    <string name="text_categori_2">Mie</string>
+    <string name="text_categori_3">Snack</string>
+    <string name="text_categori_4">Minum</string>
+    <string name="text_tittle_list">List Menu Makanan</string>
+    <string name="text_menu_1">Ayam Goreng</string>
 </resources>
