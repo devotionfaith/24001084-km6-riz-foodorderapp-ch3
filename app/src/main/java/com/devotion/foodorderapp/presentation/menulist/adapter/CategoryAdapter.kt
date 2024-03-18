@@ -1,4 +1,4 @@
-package com.devotion.foodorderapp.adapter
+package com.devotion.foodorderapp.presentation.menulist.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

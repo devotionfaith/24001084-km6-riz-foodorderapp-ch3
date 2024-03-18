@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.main.MainActivity">
-
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.menulist.MenuListFragment">
     <include
         android:id="@+id/layout_banner"
         layout="@layout/layout_banner"
@@ -47,22 +46,33 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="8dp"
-        android:paddingHorizontal="8dp"
         android:orientation="horizontal"
         android:paddingVertical="8dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintTop_toBottomOf="@id/cv_category_tittle"
         tools:listitem="@layout/item_category" />
 
-    <include
-        android:id="@+id/layout_tittle_list"
-        layout="@layout/layout_list_menu"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/tv_tittle_list"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="32dp"
+        android:text="@string/text_tittle_list"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rv_category" />
+        app:layout_constraintTop_toBottomOf="@id/rv_category"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_icon_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rv_category"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvMenu"
@@ -72,8 +82,7 @@
         android:layout_marginTop="8dp"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layout_tittle_list"
+        app:layout_constraintTop_toBottomOf="@id/tv_tittle_list"
         app:spanCount="2"
         tools:listitem="@layout/item_menu_grid" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
