@@ -6,7 +6,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".presentation.menudetail.MenuDetailFragment">
 
-
     <ImageView
         android:id="@+id/iv_menu_img_details"
         android:layout_width="match_parent"
@@ -160,6 +159,7 @@
         android:layout_marginHorizontal="32dp"
         android:paddingHorizontal="32dp"
         android:paddingVertical="16dp"
+        android:layout_marginBottom="8dp"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
