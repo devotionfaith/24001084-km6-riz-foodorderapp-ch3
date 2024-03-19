@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Food App</string>
+    <string name="app_name">Food Order App</string>
     <string name="text_tittle_banner">DISKON 40%</string>
     <string name="text_desc_banner">Pesan Makanan Lewat Aplikasi dan Dapatkan Diskon</string>
     <string name="text_name">Hi. Gustian!</string>
