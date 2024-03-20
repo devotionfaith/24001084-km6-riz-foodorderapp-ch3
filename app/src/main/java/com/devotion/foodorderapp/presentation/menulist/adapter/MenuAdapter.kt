@@ -11,7 +11,10 @@ import com.devotion.foodorderapp.data.model.Menu
 import com.devotion.foodorderapp.databinding.ItemMenuGridBinding
 import com.devotion.foodorderapp.databinding.ItemMenuListBinding
 
-class MenuAdapter(private val listMode: Int = MODE_GRID) : RecyclerView.Adapter<ViewHolder>() {
+class MenuAdapter(
+    private val listener: OnItemCLickedListener<Menu>,
+    private val listMode: Int = MODE_GRID
+) : RecyclerView.Adapter<ViewHolder>() {
     companion object {
         const val MODE_LIST = 0
         const val MODE_GRID = 1
@@ -29,7 +32,7 @@ class MenuAdapter(private val listMode: Int = MODE_GRID) : RecyclerView.Adapter<
         }
     )
 
-    fun submitData(data: List<Menu>){
+    fun submitData(data: List<Menu>) {
         asyncDataDiffer.submitList(data)
     }
 
@@ -39,14 +42,14 @@ class MenuAdapter(private val listMode: Int = MODE_GRID) : RecyclerView.Adapter<
                 LayoutInflater.from(parent.context),
                 parent,
                 false
-            )
+            ), listener
         ) else {
             MenuListItemViewHolder(
                 ItemMenuListBinding.inflate(
                     LayoutInflater.from(parent.context),
                     parent,
                     false
-                )
+                ), listener
             )
         }
     }
@@ -58,4 +61,8 @@ class MenuAdapter(private val listMode: Int = MODE_GRID) : RecyclerView.Adapter<
         (holder as ViewHolderBinder<Menu>).bind(asyncDataDiffer.currentList[position])
     }
 
+}
+
+interface OnItemCLickedListener<T> {
+    fun onItemClicked(item: T)
 }

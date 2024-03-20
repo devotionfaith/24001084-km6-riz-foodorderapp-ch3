@@ -9,7 +9,8 @@ import com.devotion.foodorderapp.base.ViewHolderBinder
 import com.devotion.foodorderapp.data.model.Category
 import com.devotion.foodorderapp.data.model.Menu
 import com.devotion.foodorderapp.databinding.ItemCategoryBinding
-class CategoryAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
+
+class CategoryAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private var asyncDataDiffer = AsyncListDiffer(
         this, object : DiffUtil.ItemCallback<Category>() {
@@ -23,7 +24,7 @@ class CategoryAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
         }
     )
 
-    fun submitDataCategory(data: List<Category>){
+    fun submitDataCategory(data: List<Category>) {
         asyncDataDiffer.submitList(data)
     }
 

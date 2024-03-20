@@ -7,14 +7,18 @@ import com.devotion.foodorderapp.data.model.Menu
 import com.devotion.foodorderapp.databinding.ItemMenuListBinding
 
 class MenuListItemViewHolder(
-    private val binding: ItemMenuListBinding
-):ViewHolder(binding.root), ViewHolderBinder<Menu> {
+    private val binding: ItemMenuListBinding,
+    private val listener: OnItemCLickedListener<Menu>
+) : ViewHolder(binding.root), ViewHolderBinder<Menu> {
     override fun bind(item: Menu) {
-        item.let{
+        item.let {
             binding.ivMenuImage.setImageResource(it.image)
             binding.tvMenuName.text = it.name
             binding.tvMenuPrice.text = it.price.toIndonesianFormat()
-            binding.tvMenuLocation.text= it.locationAddress
+            binding.tvMenuLocation.text = it.locationAddress
+            itemView.setOnClickListener {
+                listener.onItemClicked(item)
+            }
         }
     }
 }
