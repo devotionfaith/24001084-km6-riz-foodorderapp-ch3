@@ -11,12 +11,12 @@
         android:label="fragment_menu_list"
         tools:layout="@layout/fragment_menu_list" >
         <action
-            android:id="@+id/action_menuListFragment_to_menuDetailFragment"
-            app:destination="@id/menuDetailFragment" />
+            android:id="@+id/action_menuListFragment_to_detailActivity"
+            app:destination="@id/detailActivity" />
     </fragment>
-    <fragment
-        android:id="@+id/menuDetailFragment"
-        android:name="com.devotion.foodorderapp.presentation.menudetail.MenuDetailFragment"
-        android:label="fragment_menu_detail"
-        tools:layout="@layout/fragment_menu_detail" />
+    <activity
+        android:id="@+id/detailActivity"
+        android:name="com.devotion.foodorderapp.presentation.menudetail.DetailActivity"
+        android:label="activity_detail"
+        tools:layout="@layout/activity_detail" />
 </navigation>
